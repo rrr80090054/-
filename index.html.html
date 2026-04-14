@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مشروع فك التشفير</title>
+    <style>
+        /* تصميم الشاشة السوداء (ستايل الهكر) */
+        body {
+            background-color: black;
+            color: #00FF00; /* لون أخضر فاقع */
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #box {
+            border: 2px solid #00FF00;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 15px #00FF00;
+        }
+        input {
+            background: black;
+            border: 1px solid #00FF00;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        button {
+            background: #00FF00;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <h1>[ جاري اختراق النظام ]</h1>
+        <p id="message">أدخل كود الوصول لفك تشفير بيانات الملتقى:</p>
+        
+        <input type="text" id="passCode" placeholder="أدخل الكود هنا">
+        <br>
+        <button onclick="checkCode()">تحقق من الكود</button>
+    </div>
+
+    <script>
+        function checkCode() {
+            var code = document.getElementById("passCode").value;
+            // الكود الذي ستعطيه للطلاب هو "2026" مثلاً
+            if (code === "2026") {
+                document.getElementById("box").innerHTML = "<h1>تم فك التشفير بنجاح! ✅</h1><p>الموعد: الخميس القادم<br>المكان: استراحة الأماني<br>الوقت: 4:00 عصراً</p>";
+                document.body.style.backgroundColor = "#003300"; // تغيير اللون لنجاح العملية
+            } else {
+                alert("كود خاطئ! حاول مجدداً قبل أن يتم حظر جهازك.");
+            }
+        }
+    </script>
+
+</body>
+</html>
